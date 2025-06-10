@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - YGHosting</title>
+    <meta name="description" content="Choose from three premium Minecraft hosting plans: Dirt, Diamond, and Gold. All plans include 30-day money-back guarantee.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                        <div class="logo-icon">⬛</div>
+                        <span class="logo-text">YGHosting</span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#features" class="nav-link">Features</a>
+                    <a href="pricing.html" class="nav-link active">Pricing</a>
+                    <a href="index.html#support" class="nav-link">Support</a>
+                    <a href="#" class="btn btn-primary">Login</a>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="pricing.html" class="nav-link active">Pricing</a>
+                <a href="index.html#support" class="nav-link">Support</a>
+                <a href="#" class="btn btn-primary">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="hero-content">
+                <h1 style="font-size: 3rem;">Choose Your Perfect Plan</h1>
+                <p>From casual builders to massive communities, we have the perfect hosting solution for every Minecraft server. All plans include 30-day money-back guarantee.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Dirt Plan -->
+                <div class="plan-card" data-plan="dirt" data-price="5">
+                    <div class="plan-header">
+                        <div class="plan-icon bg-gradient-gold">📦</div>
+                        <h3 class="plan-name">Dirt Plan</h3>
+                        <p class="plan-description">Perfect for small groups</p>
+                        <div class="plan-price text-gold">$5<span style="font-size: 1rem; color: #9CA3AF;">/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>2GB RAM</li>
+                        <li>Up to 10 players</li>
+                        <li>10GB SSD Storage</li>
+                        <li>Daily backups</li>
+                        <li>Basic DDoS protection</li>
+                        <li>Discord support</li>
+                    </ul>
+                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #F59E0B, #D97706);" onclick="openModal('Dirt', 5)">Get Started</button>
+                </div>
+
+                <!-- Diamond Plan -->
+                <div class="plan-card popular" data-plan="diamond" data-price="15">
+                    <div class="plan-badge">MOST POPULAR</div>
+                    <div class="plan-header">
+                        <div class="plan-icon bg-gradient-blue">💎</div>
+                        <h3 class="plan-name">Diamond Plan</h3>
+                        <p class="plan-description">Great for medium servers</p>
+                        <div class="plan-price text-blue">$15<span style="font-size: 1rem; color: #9CA3AF;">/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>6GB RAM</li>
+                        <li>Up to 50 players</li>
+                        <li>50GB SSD Storage</li>
+                        <li>Hourly backups</li>
+                        <li>Advanced DDoS protection</li>
+                        <li>Priority support</li>
+                        <li>One-click modpacks</li>
+                    </ul>
+                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #3B82F6, #2563EB);" onclick="openModal('Diamond', 15)">Get Started</button>
+                </div>
+
+                <!-- Gold Plan -->
+                <div class="plan-card" data-plan="gold" data-price="30">
+                    <div class="plan-header">
+                        <div class="plan-icon bg-gradient-purple">👑</div>
+                        <h3 class="plan-name">Gold Plan</h3>
+                        <p class="plan-description">For large communities</p>
+                        <div class="plan-price text-purple">$30<span style="font-size: 1rem; color: #9CA3AF;">/month</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li>12GB RAM</li>
+                        <li>Up to 100 players</li>
+                        <li>100GB SSD Storage</li>
+                        <li>Real-time backups</li>
+                        <li>Enterprise DDoS protection</li>
+                        <li>24/7 phone support</li>
+                        <li>Custom plugins</li>
+                        <li>Dedicated IP</li>
+                    </ul>
+                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #8B5CF6, #7C3AED);" onclick="openModal('Gold', 30)">Get Started</button>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; font-size: 0.875rem; color: #6B7280;">
+                    <span>✓ Secure Payment</span>
+                    <span>✓ 30-Day Refund</span>
+                    <span>✓ SSL Protected</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon">✉️</div>
+                <h2>Almost There!</h2>
+                <p style="color: #9CA3AF;">
+                    Enter your details to continue with your 
+                    <span id="selectedPlan" style="color: var(--gaming-purple); font-weight: 600;"></span>
+                </p>
+            </div>
+            <form id="emailForm">
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Server Location</label>
+                    <select id="location" class="form-select" required>
+                        <option value="">Select server location</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="germany">Germany</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Server Type (EGGS)</label>
+                    <select id="serverType" class="form-select" required>
+                        <option value="">Select server type</option>
+                        <option value="minecraft-vanilla">Minecraft Vanilla</option>
+                        <option value="minecraft-paper">Minecraft Paper</option>
+                        <option value="minecraft-bungeecord">Minecraft Bungeecord</option>
+                        <option value="custom">Custom</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label class="checkbox-label">
+                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn-submit" id="submitBtn">Continue to Payment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
