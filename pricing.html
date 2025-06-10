@@ -24,8 +24,8 @@
                     <a href="index.html" class="nav-link">Home</a>
                     <a href="index.html#features" class="nav-link">Features</a>
                     <a href="pricing.html" class="nav-link active">Pricing</a>
-                    <a href="index.html#support" class="nav-link">Support</a>
-                    <a href="#" class="btn btn-primary">Login</a>
+                    <a href="https://discord.gg/6uM9HgqF2h" class="nav-link">Support</a>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
                 </div>
                 <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
                     <i class="fas fa-bars"></i>
@@ -35,8 +35,8 @@
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="index.html#features" class="nav-link">Features</a>
                 <a href="pricing.html" class="nav-link active">Pricing</a>
-                <a href="index.html#support" class="nav-link">Support</a>
-                <a href="#" class="btn btn-primary">Login</a>
+                <a href="https://discord.gg/6uM9HgqF2h" class="nav-link">Support</a>
+                <a href="#" class="btn btn-primary">Buy Now</a>
             </div>
         </div>
     </header>
@@ -56,7 +56,7 @@
         <div class="container">
             <div class="pricing-grid">
                 <!-- Dirt Plan -->
-                <div class="plan-card" data-plan="dirt" data-price="5">
+                <div class="plan-card" data-plan="Dirt Plan" data-price="5">
                     <div class="plan-header">
                         <div class="plan-icon bg-gradient-gold">📦</div>
                         <h3 class="plan-name">Dirt Plan</h3>
@@ -64,6 +64,7 @@
                         <div class="plan-price text-gold">$5<span style="font-size: 1rem; color: #9CA3AF;">/month</span></div>
                     </div>
                     <ul class="plan-features">
+                        <li>AMD EPYC CPU</li>
                         <li>2GB RAM</li>
                         <li>Up to 10 players</li>
                         <li>10GB SSD Storage</li>
@@ -71,11 +72,11 @@
                         <li>Basic DDoS protection</li>
                         <li>Discord support</li>
                     </ul>
-                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #F59E0B, #D97706);" onclick="openModal('Dirt', 5)">Get Started</button>
+                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #F59E0B, #D97706);" onclick="openModal('Dirt Plan', 5)">Get Started</button>
                 </div>
 
                 <!-- Diamond Plan -->
-                <div class="plan-card popular" data-plan="diamond" data-price="15">
+                <div class="plan-card popular" data-plan="Diamond Plan" data-price="15">
                     <div class="plan-badge">MOST POPULAR</div>
                     <div class="plan-header">
                         <div class="plan-icon bg-gradient-blue">💎</div>
@@ -84,6 +85,7 @@
                         <div class="plan-price text-blue">$15<span style="font-size: 1rem; color: #9CA3AF;">/month</span></div>
                     </div>
                     <ul class="plan-features">
+                        <li>AMD EPYC CPU</li>
                         <li>6GB RAM</li>
                         <li>Up to 50 players</li>
                         <li>50GB SSD Storage</li>
@@ -92,11 +94,11 @@
                         <li>Priority support</li>
                         <li>One-click modpacks</li>
                     </ul>
-                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #3B82F6, #2563EB);" onclick="openModal('Diamond', 15)">Get Started</button>
+                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #3B82F6, #2563EB);" onclick="openModal('Diamond Plan', 15)">Get Started</button>
                 </div>
 
                 <!-- Gold Plan -->
-                <div class="plan-card" data-plan="gold" data-price="30">
+                <div class="plan-card" data-plan="Gold Plan" data-price="30">
                     <div class="plan-header">
                         <div class="plan-icon bg-gradient-purple">👑</div>
                         <h3 class="plan-name">Gold Plan</h3>
@@ -104,6 +106,7 @@
                         <div class="plan-price text-purple">$30<span style="font-size: 1rem; color: #9CA3AF;">/month</span></div>
                     </div>
                     <ul class="plan-features">
+                        <li>AMD RYZEN CPU</li>
                         <li>12GB RAM</li>
                         <li>Up to 100 players</li>
                         <li>100GB SSD Storage</li>
@@ -113,7 +116,7 @@
                         <li>Custom plugins</li>
                         <li>Dedicated IP</li>
                     </ul>
-                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #8B5CF6, #7C3AED);" onclick="openModal('Gold', 30)">Get Started</button>
+                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #8B5CF6, #7C3AED);" onclick="openModal('Gold Plan', 30)">Get Started</button>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
@@ -127,7 +130,7 @@
     </section>
 
     <!-- Email Modal -->
-    <div id="emailModal" class="modal">
+    <div id="emailModal" class="modal" style="display:none;">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-icon">✉️</div>
@@ -137,34 +140,40 @@
                     <span id="selectedPlan" style="color: var(--gaming-purple); font-weight: 600;"></span>
                 </p>
             </div>
-            <form id="emailForm">
+            <form id="userInfoForm" action="https://formspree.io/f/xyzjevyo" method="POST">
+                <input type="hidden" id="formPlan" name="plan">
+                <input type="hidden" id="formPrice" name="price">
                 <div class="form-group">
                     <label class="form-label">Email Address</label>
-                    <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="your@email.com" required>
                 </div>
                 <div class="form-group">
                     <label class="form-label">Server Location</label>
-                    <select id="location" class="form-select" required>
+                    <select id="location" name="location" class="form-select" required>
                         <option value="">Select server location</option>
-                        <option value="singapore">Singapore</option>
-                        <option value="india">India</option>
-                        <option value="usa">USA</option>
-                        <option value="germany">Germany</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Germany">Germany</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label class="form-label">Server Type (EGGS)</label>
-                    <select id="serverType" class="form-select" required>
+                    <label class="form-label">Server Type (Eggs)</label>
+                    <select id="serverType" name="server_type" class="form-select" required>
                         <option value="">Select server type</option>
-                        <option value="minecraft-vanilla">Minecraft Vanilla</option>
-                        <option value="minecraft-paper">Minecraft Paper</option>
-                        <option value="minecraft-bungeecord">Minecraft Bungeecord</option>
-                        <option value="custom">Custom</option>
+                        <option value="Minecraft Vanilla">Minecraft Vanilla</option>
+                        <option value="Minecraft Paper">Minecraft Paper</option>
+                        <option value="Minecraft Bungeecord">Minecraft Bungeecord</option>
+                        <option value="Custom">Custom</option>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Minecraft/Discord Username</label>
+                    <input type="text" id="username" name="username" class="form-input" placeholder="Your username" required>
                 </div>
                 <div class="form-group">
                     <div class="checkbox-group">
-                        <input type="checkbox" id="terms" required>
+                        <input type="checkbox" id="terms" name="terms" required>
                         <label class="checkbox-label">
                             I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
                         </label>
@@ -178,6 +187,54 @@
         </div>
     </div>
 
+    <script>
+    // Modal open/close logic
+    function openModal(plan, price) {
+        document.getElementById('emailModal').style.display = "block";
+        document.getElementById('selectedPlan').textContent = plan;
+        document.getElementById('formPlan').value = plan;
+        document.getElementById('formPrice').value = price;
+    }
+    function closeModal() {
+        document.getElementById('emailModal').style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('emailModal')) {
+            closeModal();
+        }
+    }
+    window.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+
+    // Payment links for each plan
+    const paymentLinks = {
+        "Dirt Plan": "dirtplan.yghosting.xyz",
+        "Diamond Plan": "diamondplan.yghosting.xyz",
+        "Gold Plan": "goldplan.yghosting.xyz"
+    };
+
+    // Formspree AJAX + redirect to plan-based payment link
+    document.getElementById('userInfoForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var form = this;
+        var data = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: {'Accept': 'application/json'}
+        }).then(function(response) {
+            if (response.ok) {
+                const plan = document.getElementById('formPlan').value;
+                window.location.href = paymentLinks[plan] || "https://discord.gg/6uM9HgqF2h";
+            } else {
+                alert('There was a problem submitting your info. Please try again.');
+            }
+        });
+    });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
