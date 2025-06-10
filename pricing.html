@@ -72,7 +72,7 @@
                         <li>Basic DDoS protection</li>
                         <li>Discord support</li>
                     </ul>
-                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #F59E0B, #D97706);" onclick="openModal('Dirt Plan', 5)">Get Started</button>
+                    <button class="btn btn-gradient get-started-btn" style="width: 100%; background: linear-gradient(to right, #F59E0B, #D97706);" data-plan="Dirt Plan" data-price="5">Get Started</button>
                 </div>
 
                 <!-- Diamond Plan -->
@@ -94,7 +94,7 @@
                         <li>Priority support</li>
                         <li>One-click modpacks</li>
                     </ul>
-                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #3B82F6, #2563EB);" onclick="openModal('Diamond Plan', 15)">Get Started</button>
+                    <button class="btn btn-gradient get-started-btn" style="width: 100%; background: linear-gradient(to right, #3B82F6, #2563EB);" data-plan="Diamond Plan" data-price="15">Get Started</button>
                 </div>
 
                 <!-- Gold Plan -->
@@ -116,7 +116,7 @@
                         <li>Custom plugins</li>
                         <li>Dedicated IP</li>
                     </ul>
-                    <button class="btn btn-gradient" style="width: 100%; background: linear-gradient(to right, #8B5CF6, #7C3AED);" onclick="openModal('Gold Plan', 30)">Get Started</button>
+                    <button class="btn btn-gradient get-started-btn" style="width: 100%; background: linear-gradient(to right, #8B5CF6, #7C3AED);" data-plan="Gold Plan" data-price="30">Get Started</button>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 3rem;">
@@ -180,7 +180,7 @@
                     </div>
                 </div>
                 <div class="modal-buttons">
-                    <button type="button" class="btn btn-cancel" onclick="closeModal()">Cancel</button>
+                    <button type="button" class="btn btn-cancel" id="cancelBtn">Cancel</button>
                     <button type="submit" class="btn btn-submit" id="submitBtn">Continue to Payment</button>
                 </div>
             </form>
@@ -188,50 +188,61 @@
     </div>
 
     <script>
-    // Modal open/close logic
-    function openModal(plan, price) {
-        document.getElementById('emailModal').style.display = "block";
-        document.getElementById('selectedPlan').textContent = plan;
-        document.getElementById('formPlan').value = plan;
-        document.getElementById('formPrice').value = price;
-    }
-    function closeModal() {
-        document.getElementById('emailModal').style.display = "none";
-    }
-    window.onclick = function(event) {
-        if (event.target == document.getElementById('emailModal')) {
-            closeModal();
+    document.addEventListener('DOMContentLoaded', function() {
+        // Modal open/close logic
+        function openModal(plan, price) {
+            document.getElementById('emailModal').style.display = "block";
+            document.getElementById('selectedPlan').textContent = plan;
+            document.getElementById('formPlan').value = plan;
+            document.getElementById('formPrice').value = price;
         }
-    }
-    window.addEventListener('keydown', function(event) {
-        if (event.key === "Escape") {
-            closeModal();
+        function closeModal() {
+            document.getElementById('emailModal').style.display = "none";
         }
-    });
+        document.getElementById('cancelBtn').addEventListener('click', closeModal);
 
-    // Payment links for each plan
-    const paymentLinks = {
-        "Dirt Plan": "dirtplan.yghosting.xyz",
-        "Diamond Plan": "diamondplan.yghosting.xyz",
-        "Gold Plan": "goldplan.yghosting.xyz"
-    };
+        // Assign modal openers
+        document.querySelectorAll('.get-started-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                openModal(this.dataset.plan, this.dataset.price);
+            });
+        });
 
-    // Formspree AJAX + redirect to plan-based payment link
-    document.getElementById('userInfoForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        var form = this;
-        var data = new FormData(form);
-        fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: {'Accept': 'application/json'}
-        }).then(function(response) {
-            if (response.ok) {
-                const plan = document.getElementById('formPlan').value;
-                window.location.href = paymentLinks[plan] || "https://discord.gg/6uM9HgqF2h";
-            } else {
-                alert('There was a problem submitting your info. Please try again.');
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('emailModal')) {
+                closeModal();
             }
+        }
+        window.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+
+        // Payment links for each plan
+        const paymentLinks = {
+            "Dirt Plan": "https://dirtplan.yghosting.xyz",
+            "Diamond Plan": "https://diamondplan.yghosting.xyz",
+            "Gold Plan": "https://goldplan.yghosting.xyz"
+        };
+
+        // Formspree AJAX + redirect to plan-based payment link
+        document.getElementById('userInfoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var data = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: {'Accept': 'application/json'}
+            }).then(function(response) {
+                if (response.ok) {
+                    const plan = document.getElementById('formPlan').value;
+                    window.location.href = paymentLinks[plan] || "https://discord.gg/6uM9HgqF2h";
+                } else {
+                    alert('There was a problem submitting your info. Please try again.');
+                }
+            });
         });
     });
     </script>
