@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-496999833"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-496999833');
-</script>
     <script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-496999833/lDRnCLvyvdgaEJm7_uwB',
-      'transaction_id': ''
-  });
-</script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-496999833');
+    </script>
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-496999833/lDRnCLvyvdgaEJm7_uwB',
+          'transaction_id': ''
+      });
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -91,7 +90,7 @@
                 </div>
 
                 <!-- Diamond Plan -->
-                <div class="plan-card popular" data-plan="Diamomd Plan" data-price="15">
+                <div class="plan-card popular" data-plan="Diamond Plan" data-price="15">
                     <div class="plan-badge">MOST POPULAR</div>
                     <div class="plan-header">
                         <div class="plan-icon bg-gradient-blue">💎</div>
@@ -101,13 +100,12 @@
                     </div>
                     <ul class="plan-features">
                         <li>6GB RAM</li>
-                         <li>4 VCPUs</li>
+                        <li>4 VCPUs</li>
                         <li>Unlimited Bandwidth</li>
                         <li>100GB SSD Storage</li>
                         <li>Hourly backups</li>
                         <li>Advanced DDoS protection</li>
                         <li>Priority support</li>
-                       
                     </ul>
                     <button class="btn btn-gradient get-started-btn" style="width: 100%; background: linear-gradient(to right, #3B82F6, #2563EB);" data-plan="Diamond Plan" data-price="15">Get Started</button>
                 </div>
@@ -122,7 +120,7 @@
                     </div>
                     <ul class="plan-features">
                         <li>16GB RAM</li>
-                         <li>8 VCPUs</li>
+                        <li>8 VCPUs</li>
                         <li>Unlimited Bandwidth</li>
                         <li>200GB SSD Storage</li>
                         <li>Real-time backups</li>
@@ -145,7 +143,7 @@
     </section>
 
     <!-- Email Modal -->
-    <div id="emailModal" class="modal" style="display:none;">
+    <div id="emailModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-icon">✉️</div>
@@ -184,11 +182,11 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label">VCPUs Required</label>
-                    <input type="text" id="username" name="username" class="form-input" placeholder="Leave 0, If Default Amt." required>
+                    <input type="text" id="vcpus" name="vcpus" class="form-input" placeholder="Leave 0, If Default Amt." required>
                 </div>
-                                <div class="form-group">
+                <div class="form-group">
                     <label class="form-label">Discord Username</label>
-                    <input type="text" id="username" name="username" class="form-input" placeholder="Your username" required>
+                    <input type="text" id="discord" name="discord" class="form-input" placeholder="Your username" required>
                 </div>
                 <div class="form-group">
                     <div class="checkbox-group">
@@ -207,16 +205,31 @@
     </div>
 
     <script>
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu) {
+            mobileMenu.classList.toggle('show');
+        }
+    }
     document.addEventListener('DOMContentLoaded', function() {
         // Modal open/close logic
         function openModal(plan, price) {
-            document.getElementById('emailModal').style.display = "block";
+            const modal = document.getElementById('emailModal');
+            modal.classList.add('show');
             document.getElementById('selectedPlan').textContent = plan;
             document.getElementById('formPlan').value = plan;
             document.getElementById('formPrice').value = price;
+            document.body.style.overflow = 'hidden';
         }
         function closeModal() {
-            document.getElementById('emailModal').style.display = "none";
+            const modal = document.getElementById('emailModal');
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+            // Optionally reset the form
+            if(document.getElementById('userInfoForm')) {
+                document.getElementById('userInfoForm').reset();
+            }
         }
         document.getElementById('cancelBtn').addEventListener('click', closeModal);
 
@@ -228,7 +241,8 @@
         });
 
         window.onclick = function(event) {
-            if (event.target == document.getElementById('emailModal')) {
+            const modal = document.getElementById('emailModal');
+            if (event.target === modal) {
                 closeModal();
             }
         }
@@ -263,6 +277,40 @@
                 }
             });
         });
+
+        // Smooth scrolling for hash links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+
+    // Close mobile menu when clicking on a link
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('nav-link') && window.innerWidth <= 768) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu) {
+                mobileMenu.classList.remove('show');
+            }
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenu) {
+                mobileMenu.classList.remove('show');
+            }
+        }
     });
     </script>
     <script src="script.js"></script>
