@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-496999833"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-496999833');
-</script>
     <script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-496999833/lDRnCLvyvdgaEJm7_uwB',
-      'transaction_id': ''
-  });
-</script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-496999833');
+    </script>
+    <script>
+      gtag('event', 'conversion', {
+          'send_to': 'AW-496999833/lDRnCLvyvdgaEJm7_uwB',
+          'transaction_id': ''
+      });
+    </script>
 </head>
 <body>
     <!-- Header -->
@@ -145,7 +144,7 @@
     </section>
 
     <!-- Email Modal -->
-    <div id="emailModal" class="modal" style="display:none;">
+    <div id="emailModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-icon">✉️</div>
@@ -206,13 +205,13 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Modal open/close logic
         function openModal(plan, price) {
-            document.getElementById('emailModal').style.display = "block";
+            document.getElementById('emailModal').classList.add('show');
             document.getElementById('selectedPlan').textContent = plan;
             document.getElementById('formPlan').value = plan;
             document.getElementById('formPrice').value = price;
         }
         function closeModal() {
-            document.getElementById('emailModal').style.display = "none";
+            document.getElementById('emailModal').classList.remove('show');
         }
         document.getElementById('cancelBtn').addEventListener('click', closeModal);
 
