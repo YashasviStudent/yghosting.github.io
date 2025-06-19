@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VPS Hosting Plans | YG Hosting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css"> <!-- Adjust if your CSS file is named differently -->
+    <style>
+        .vps-plans { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem;}
+        .plan { border: 1px solid #ccc; border-radius: 8px; padding: 2rem; width: 240px; text-align: center; background: #fafafa;}
+        .plan h3 { margin-bottom: .5rem; }
+        .plan-details { margin-bottom: 1rem; }
+        form { display: flex; flex-direction: column; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; align-items: flex-start; }
+        label { font-weight: 500; margin-bottom: .25rem;}
+        select, input { width: 100%; padding: .5rem; border: 1px solid #aaa; border-radius: 4px;}
+        button { padding: .7rem 1.2rem; background: #4e60d3; color: #fff; border: none; border-radius: 4px; font-size: 1rem;}
+        button:active { background: #3d479c; }
+    </style>
+</head>
+<body>
+    <!-- Add your navigation here or include your nav.html -->
+    <header>
+        <h1>VPS Hosting Plans</h1>
+    </header>
+    <section class="vps-plans">
+        <!-- Plan 1 -->
+        <div class="plan">
+            <h3>VPS 2GB</h3>
+            <div class="plan-details">
+                <strong>RAM:</strong> 2 GB<br>
+                <strong>Storage:</strong> 40 GB NVMe SSD<br>
+                <strong>CPU:</strong> AMD EPYC<br>
+            </div>
+            <form action="https://formspree.io/f/your-form-id" method="POST" onsubmit="return redirectDiscord()">
+                <input type="hidden" name="Plan" value="VPS 2GB">
+                <div class="form-group">
+                    <label for="name1">Name</label>
+                    <input type="text" id="name1" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email1">Email</label>
+                    <input type="email" id="email1" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="discord1">Discord Name</label>
+                    <input type="text" id="discord1" name="Discord" placeholder="e.g. user#1234" required>
+                </div>
+                <div class="form-group">
+                    <label for="location1">Location</label>
+                    <select id="location1" name="Location" required>
+                        <option value="">Select location</option>
+                        <option>USA</option>
+                        <option>Germany</option>
+                        <option>India</option>
+                        <option>Singapore</option>
+                        <option>Japan</option>
+                        <option>Custom</option>
+                    </select>
+                </div>
+                <button type="submit">Continue to Payment</button>
+            </form>
+        </div>
+        <!-- Plan 2 -->
+        <div class="plan">
+            <h3>VPS 4GB</h3>
+            <div class="plan-details">
+                <strong>RAM:</strong> 4 GB<br>
+                <strong>Storage:</strong> 80 GB NVMe SSD<br>
+                <strong>CPU:</strong> AMD EPYC<br>
+            </div>
+            <form action="https://formspree.io/f/your-form-id" method="POST" onsubmit="return redirectDiscord()">
+                <input type="hidden" name="Plan" value="VPS 4GB">
+                <div class="form-group">
+                    <label for="name2">Name</label>
+                    <input type="text" id="name2" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email2">Email</label>
+                    <input type="email" id="email2" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="discord2">Discord Name</label>
+                    <input type="text" id="discord2" name="Discord" required>
+                </div>
+                <div class="form-group">
+                    <label for="location2">Location</label>
+                    <select id="location2" name="Location" required>
+                        <option value="">Select location</option>
+                        <option>USA</option>
+                        <option>Germany</option>
+                        <option>India</option>
+                        <option>Singapore</option>
+                        <option>Japan</option>
+                        <option>Custom</option>
+                    </select>
+                </div>
+                <button type="submit">Continue to Payment</button>
+            </form>
+        </div>
+        <!-- Plan 3 -->
+        <div class="plan">
+            <h3>VPS 6GB</h3>
+            <div class="plan-details">
+                <strong>RAM:</strong> 6 GB<br>
+                <strong>Storage:</strong> 120 GB NVMe SSD<br>
+                <strong>CPU:</strong> AMD EPYC<br>
+            </div>
+            <form action="https://formspree.io/f/your-form-id" method="POST" onsubmit="return redirectDiscord()">
+                <input type="hidden" name="Plan" value="VPS 6GB">
+                <div class="form-group">
+                    <label for="name3">Name</label>
+                    <input type="text" id="name3" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email3">Email</label>
+                    <input type="email" id="email3" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="discord3">Discord Name</label>
+                    <input type="text" id="discord3" name="Discord" required>
+                </div>
+                <div class="form-group">
+                    <label for="location3">Location</label>
+                    <select id="location3" name="Location" required>
+                        <option value="">Select location</option>
+                        <option>USA</option>
+                        <option>Germany</option>
+                        <option>India</option>
+                        <option>Singapore</option>
+                        <option>Japan</option>
+                        <option>Custom</option>
+                    </select>
+                </div>
+                <button type="submit">Continue to Payment</button>
+            </form>
+        </div>
+        <!-- Plan 4 -->
+        <div class="plan">
+            <h3>VPS 12GB</h3>
+            <div class="plan-details">
+                <strong>RAM:</strong> 12 GB<br>
+                <strong>Storage:</strong> 240 GB NVMe SSD<br>
+                <strong>CPU:</strong> AMD EPYC<br>
+            </div>
+            <form action="https://formspree.io/f/your-form-id" method="POST" onsubmit="return redirectDiscord()">
+                <input type="hidden" name="Plan" value="VPS 12GB">
+                <div class="form-group">
+                    <label for="name4">Name</label>
+                    <input type="text" id="name4" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email4">Email</label>
+                    <input type="email" id="email4" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="discord4">Discord Name</label>
+                    <input type="text" id="discord4" name="Discord" required>
+                </div>
+                <div class="form-group">
+                    <label for="location4">Location</label>
+                    <select id="location4" name="Location" required>
+                        <option value="">Select location</option>
+                        <option>USA</option>
+                        <option>Germany</option>
+                        <option>India</option>
+                        <option>Singapore</option>
+                        <option>Japan</option>
+                        <option>Custom</option>
+                    </select>
+                </div>
+                <button type="submit">Continue to Payment</button>
+            </form>
+        </div>
+        <!-- Plan 5 (16 GB, if needed) -->
+        <div class="plan">
+            <h3>VPS 16GB</h3>
+            <div class="plan-details">
+                <strong>RAM:</strong> 16 GB<br>
+                <strong>Storage:</strong> 320 GB NVMe SSD<br>
+                <strong>CPU:</strong> AMD EPYC<br>
+            </div>
+            <form action="https://formspree.io/f/your-form-id" method="POST" onsubmit="return redirectDiscord()">
+                <input type="hidden" name="Plan" value="VPS 16GB">
+                <div class="form-group">
+                    <label for="name5">Name</label>
+                    <input type="text" id="name5" name="Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email5">Email</label>
+                    <input type="email" id="email5" name="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="discord5">Discord Name</label>
+                    <input type="text" id="discord5" name="Discord" required>
+                </div>
+                <div class="form-group">
+                    <label for="location5">Location</label>
+                    <select id="location5" name="Location" required>
+                        <option value="">Select location</option>
+                        <option>USA</option>
+                        <option>Germany</option>
+                        <option>India</option>
+                        <option>Singapore</option>
+                        <option>Japan</option>
+                        <option>Custom</option>
+                    </select>
+                </div>
+                <button type="submit">Continue to Payment</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        // Replace "your-form-id" in action URLs above with your Formspree form ID
+        function redirectDiscord() {
+            setTimeout(function() {
+                window.location.href = "https://discord.gg/6uM9HgqF2h";
+            }, 300); // Wait 300ms for Formspree submission
+            return true;
+        }
+    </script>
+</body>
+</html>
