@@ -20145,7 +20145,7 @@ const SS = () => {
             link: "/billing/store/in-ultimate/ultimate-supreme"
         }],
         "EPIC VPS": [{
-            name: "Game Starter",
+            name: "Game Starter - Contact Support",
             cpu: "2 vCores CPU",
             ram: "8GB DDR5 ECC Memory",
             storage: "50GB M.2 NVMe 4.0 SSD",
@@ -20153,9 +20153,9 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹999/month",
-            link: "/billing/store/in-game/game-starter"
+            link: "https://yghosting.xyz/vps.html"
         }, {
-            name: "Game Mega",
+            name: "Game Mega - Contact Support",
             cpu: "3 vCores CPU",
             ram: "16GB DDR5 ECC Memory",
             storage: "60GB M.2 NVMe 4.0 SSD",
@@ -20163,9 +20163,9 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹1,599/month",
-            link: "/billing/store/in-game/game-mega"
+            link: "https://yghosting.xyz/vps.html"
         }, {
-            name: "Game Giga",
+            name: "Game Giga - Contact Support",
             cpu: "6 vCores CPU",
             ram: "32GB DDR5 ECC Memory",
             storage: "120GB M.2 NVMe 4.0 SSD",
@@ -20173,10 +20173,10 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹3,199/month",
-            link: "/billing/store/in-game/game-giga",
+            link: "https://yghosting.xyz/vps.html",
             popular: !0
         }, {
-            name: "Game Ultra",
+            name: "Game Ultra - Contact Support",
             cpu: "9 vCores CPU",
             ram: "48GB DDR5 ECC Memory",
             storage: "180GB M.2 NVMe 4.0 SSD",
@@ -20184,9 +20184,9 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹4,799/month",
-            link: "/billing/store/in-game/game-ultra"
+            link: "https://yghosting.xyz/vps.html"
         }, {
-            name: "Game Supreme",
+            name: "Game Supreme - Contact Support",
             cpu: "12 vCores CPU",
             ram: "64GB DDR5 ECC Memory",
             storage: "240GB M.2 NVMe 4.0 SSD",
@@ -20194,7 +20194,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹6,399/month",
-            link: "/billing/store/in-game/game-supreme"
+            link: "https://yghosting.xyz/vps.html"
         }],
         "VPS": [{
             name: "Standard Starter",
@@ -20205,7 +20205,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹500/month",
-            link: "/billing/store/in-standard/standard-starter"
+            link: https://yghosting.xyz/vps.html"
         }, {
             name: "Standard Mega",
             cpu: "4 vCores CPU",
@@ -20215,7 +20215,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹950/month",
-            link: "/billing/store/in-standard/standard-mega"
+            link: "https://yghosting.xyz/vps.html"
         }, {
             name: "Standard Giga",
             cpu: "8 vCores CPU",
@@ -20225,7 +20225,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹2,000/month",
-            link: "/billing/store/in-standard/standard-giga",
+            link: "https://yghosting.xyz/vps.html",
             popular: !0
         }, {
             name: "Standard Ultra",
@@ -20236,7 +20236,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹2,600/month",
-            link: "/billing/store/in-standard/standard-ultra"
+            link: "https://yghosting.xyz/vps.html"
         }, {
             name: "Standard Supreme",
             cpu: "16 vCores CPU",
@@ -20246,10 +20246,10 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹4,000/month",
-            link: "/billing/store/in-standard/standard-supreme",
+            link: "https://yghosting.xyz/vps.html",
             popular: !0
         }, {
-            name: "Standard Prime",
+            name: "Standard Prime - Contact Support",
             cpu: "24 vCores CPU",
             ram: "96GB DDR4 ECC Memory",
             storage: "360GB M.2 NVMe 3.0 SSD",
@@ -20257,9 +20257,9 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹7,000/month",
-            link: "/billing/store/in-standard/standard-prime"
+            link: "https://yghosting.xyz/vps.html"
         }, {
-            name: "Standard Extreme",
+            name: "Standard Extreme - Contact Support",
             cpu: "32 vCores CPU",
             ram: "128GB DDR4 ECC Memory",
             storage: "480GB M.2 NVMe 3.0 SSD",
@@ -20267,7 +20267,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹9,400/month",
-            link: "/billing/store/in-standard/standard-extreme"
+            link: "https://yghosting.xyz/vps.html"
         }],
         "KVM Budget VPS": [{
             name: "Budget Starter",
