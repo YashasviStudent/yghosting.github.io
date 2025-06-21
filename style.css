@@ -10,8 +10,9 @@
     --gaming-gold: #F59E0B;
     --gaming-blue: #3B82F6;
     --dark-bg: #000000;
-    --dark-surface: #1a1a1a;
-    --dark-border: #333333;
+    --dark-surface: #111111;
+    --dark-border: #222222;
+    --darker-surface: #0a0a0a;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 
 /* Header */
 .header {
-    background: rgba(26, 26, 26, 0.95);
+    background: rgba(17, 17, 17, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--dark-border);
     position: sticky;
@@ -53,7 +54,7 @@ body {
 .logo-icon {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, var(--gaming-orange), #FF8C69);
+    background: linear-gradient(135deg, #333333, #444444);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -65,10 +66,7 @@ body {
 .logo-text {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(to right, var(--gaming-orange), #FF8C69);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #F1F5F9;
 }
 
 .nav-links {
@@ -147,20 +145,19 @@ body {
 }
 
 .btn-gradient {
-    background: linear-gradient(to right, var(--gaming-orange), #FF8C69);
+    background: var(--gaming-orange);
     color: white;
     padding: 1rem 2rem;
     font-size: 1.1rem;
-    animation: glow 2s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
-    from { box-shadow: 0 0 20px rgba(255, 107, 53, 0.3); }
-    to { box-shadow: 0 0 30px rgba(255, 107, 53, 0.5), 0 0 40px rgba(255, 107, 53, 0.3); }
+.btn-gradient:hover {
+    background: #E55A2B;
+    transform: translateY(-2px);
 }
 
 .btn-outline {
-    border: 1px solid #6B7280;
+    border: 1px solid #444444;
     background: transparent;
     color: #D1D5DB;
     padding: 1rem 2rem;
@@ -177,13 +174,14 @@ body {
     position: relative;
     padding: 5rem 0;
     overflow: hidden;
+    background: var(--dark-bg);
 }
 
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 140, 105, 0.1));
+    background: linear-gradient(135deg, rgba(34, 34, 34, 0.3), rgba(68, 68, 68, 0.2));
 }
 
 .hero-content {
@@ -198,7 +196,7 @@ body {
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
-    background: linear-gradient(to right, white, var(--gaming-orange), #FF8C69);
+    background: linear-gradient(to right, #F1F5F9, #D1D5DB, #9CA3AF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -233,6 +231,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color: #F1F5F9;
 }
 
 .stat-label {
@@ -242,7 +241,7 @@ body {
 /* Features Section */
 .features {
     padding: 5rem 0;
-    background: rgba(26, 26, 26, 0.5);
+    background: var(--darker-surface);
 }
 
 .section-title {
@@ -254,6 +253,7 @@ body {
     font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: #F1F5F9;
 }
 
 .section-title p {
@@ -270,7 +270,7 @@ body {
 }
 
 .feature-card {
-    background: rgba(26, 26, 26, 0.8);
+    background: var(--dark-surface);
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 16px;
@@ -279,7 +279,7 @@ body {
 }
 
 .feature-card:hover {
-    border-color: rgba(255, 107, 53, 0.5);
+    border-color: #444444;
     transform: translateY(-4px);
 }
 
@@ -293,17 +293,20 @@ body {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     color: white;
+    background: linear-gradient(135deg, #333333, #444444);
 }
 
 .feature-card h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
+    color: #F1F5F9;
 }
 
 /* Pricing Section */
 .pricing {
     padding: 5rem 0;
+    background: var(--dark-bg);
 }
 
 .pricing-grid {
@@ -315,7 +318,7 @@ body {
 }
 
 .plan-card {
-    background: rgba(26, 26, 26, 0.9);
+    background: var(--dark-surface);
     backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 16px;
@@ -326,17 +329,20 @@ body {
 
 .plan-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(255, 107, 53, 0.5);
+    border-color: #444444;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .plan-card.popular {
     border: 2px solid var(--gaming-orange);
     transform: scale(1.02);
-    background: rgba(255, 107, 53, 0.05);
+    background: var(--dark-surface);
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.1);
 }
 
 .plan-card.popular:hover {
     transform: scale(1.02) translateY(-8px);
+    box-shadow: 0 0 30px rgba(255, 107, 53, 0.2), 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .plan-badge {
@@ -367,12 +373,14 @@ body {
     margin: 0 auto 1rem;
     font-size: 2rem;
     color: white;
+    background: linear-gradient(135deg, #333333, #444444);
 }
 
 .plan-name {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color: #F1F5F9;
 }
 
 .plan-description {
@@ -383,6 +391,7 @@ body {
 .plan-price {
     font-size: 2.5rem;
     font-weight: 700;
+    color: #F1F5F9;
 }
 
 .plan-features {
@@ -441,7 +450,7 @@ body {
 .modal-icon {
     width: 64px;
     height: 64px;
-    background: linear-gradient(135deg, var(--gaming-orange), #FF8C69);
+    background: linear-gradient(135deg, #333333, #444444);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -455,6 +464,7 @@ body {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    color: #F1F5F9;
 }
 
 .form-group {
@@ -471,7 +481,7 @@ body {
 .form-input, .form-select {
     width: 100%;
     padding: 0.75rem;
-    background: var(--dark-bg);
+    background: var(--darker-surface);
     border: 1px solid var(--dark-border);
     border-radius: 8px;
     color: white;
@@ -484,7 +494,7 @@ body {
 }
 
 .form-select option {
-    background: var(--dark-bg);
+    background: var(--darker-surface);
     color: white;
 }
 
@@ -522,18 +532,22 @@ body {
 .btn-cancel {
     flex: 1;
     background: transparent;
-    border: 1px solid #6B7280;
+    border: 1px solid #444444;
     color: #D1D5DB;
 }
 
 .btn-cancel:hover {
-    background: rgba(107, 114, 128, 0.1);
+    background: rgba(68, 68, 68, 0.1);
 }
 
 .btn-submit {
     flex: 1;
-    background: linear-gradient(to right, var(--gaming-orange), #FF8C69);
+    background: var(--gaming-orange);
     color: white;
+}
+
+.btn-submit:hover {
+    background: #E55A2B;
 }
 
 .btn:disabled {
@@ -562,6 +576,7 @@ body {
     font-size: 1.125rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    color: #F1F5F9;
 }
 
 .footer-links ul {
@@ -596,7 +611,7 @@ body {
 .social-link {
     width: 40px;
     height: 40px;
-    background: var(--dark-bg);
+    background: var(--darker-surface);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -622,7 +637,7 @@ body {
 .bg-gradient-emerald { background: linear-gradient(135deg, var(--gaming-emerald), #059669); }
 .bg-gradient-gold { background: linear-gradient(135deg, var(--gaming-gold), #D97706); }
 .bg-gradient-blue { background: linear-gradient(135deg, var(--gaming-blue), #2563EB); }
-.bg-gradient-orange { background: linear-gradient(135deg, var(--gaming-orange), #FF8C69); }
+.bg-gradient-orange { background: linear-gradient(135deg, #333333, #444444); }
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -730,7 +745,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.05), rgba(255, 140, 105, 0.05));
+    background: linear-gradient(135deg, rgba(34, 34, 34, 0.3), rgba(68, 68, 68, 0.2));
     border-radius: 16px;
     pointer-events: none;
 }
@@ -738,7 +753,7 @@ body {
 /* Enhanced button hover effects */
 .btn-gradient:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .get-started-btn:active {
@@ -751,7 +766,7 @@ body {
 }
 
 .plan-card:hover .plan-icon {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
@@ -799,13 +814,4 @@ body {
 /* Smooth transitions for all interactive elements */
 * {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Enhanced glow effect for popular plans */
-.plan-card.popular {
-    box-shadow: 0 0 30px rgba(255, 107, 53, 0.2);
-}
-
-.plan-card.popular:hover {
-    box-shadow: 0 0 40px rgba(255, 107, 53, 0.3), 0 10px 30px rgba(0, 0, 0, 0.3);
 }
