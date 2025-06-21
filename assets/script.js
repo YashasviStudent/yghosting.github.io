@@ -19724,7 +19724,7 @@ const SS = () => {
                                     }), f.disabled && a.jsx("p", {
                                         className: "text-sm text-badminner mt-1 font-medium",
                                         children: a.jsx(Ts, {
-                                            children: "Coming Soon"
+                                            children: "Available"
                                         })
                                     })]
                                 })
@@ -20414,7 +20414,7 @@ const SS = () => {
                                     }), l.disabled && a.jsx("p", {
                                         className: "text-sm text-badminner mt-1 font-medium",
                                         children: a.jsx(Ts, {
-                                            children: "Coming Soon"
+                                            children: "Available"
                                         })
                                     })]
                                 })
@@ -20857,7 +20857,7 @@ const SS = () => {
       , u = () => {
         if (!t) {
             o(null),
-            c("Coming soon");
+            c("Available");
             return
         }
         s(!0),
@@ -20876,7 +20876,7 @@ const SS = () => {
                 } else {
                     const h = e === "India" ? Math.floor(Math.random() * 30) : null;
                     o(h),
-                    h || c("Coming soon")
+                    h || c("Available")
                 }
         }
         ;
