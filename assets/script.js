@@ -20205,7 +20205,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹500/month",
-            link: https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/vps.html"
         }, {
             name: "Standard Mega",
             cpu: "4 vCores CPU",
