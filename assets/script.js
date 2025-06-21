@@ -19808,7 +19808,7 @@ const SS = () => {
                             children: [n, " Server Plans with ", o]
                         }), a.jsxs("p", {
                             className: "text-foreground/70",
-                            children: ["Available in ", e]
+                            children: ["Available in USA, Germany, Singapore and ", e]
                         })]
                     }), a.jsx("div", {
                         className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8",
