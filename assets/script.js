@@ -20153,7 +20153,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹999/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }, {
             name: "Game Mega - Contact Support",
             cpu: "3 vCores CPU",
@@ -20163,7 +20163,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹1,599/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }, {
             name: "Game Giga - Contact Support",
             cpu: "6 vCores CPU",
@@ -20173,7 +20173,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹3,199/month",
-            link: "https://yghosting.xyz/vps.html",
+            link: "https://yghosting.xyz/pricing-vps.html",
             popular: !0
         }, {
             name: "Game Ultra - Contact Support",
@@ -20184,7 +20184,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹4,799/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }, {
             name: "Game Supreme - Contact Support",
             cpu: "12 vCores CPU",
@@ -20194,7 +20194,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹6,399/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }],
         "VPS": [{
             name: "Standard Starter",
@@ -20205,7 +20205,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹500/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }, {
             name: "Standard Mega",
             cpu: "4 vCores CPU",
@@ -20215,7 +20215,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹950/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }, {
             name: "Standard Giga",
             cpu: "8 vCores CPU",
@@ -20225,7 +20225,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹2,000/month",
-            link: "https://yghosting.xyz/vps.html",
+            link: "https://yghosting.xyz/pricing-vps.html",
             popular: !0
         }, {
             name: "Standard Ultra",
@@ -20236,7 +20236,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹2,600/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }, {
             name: "Standard Supreme",
             cpu: "16 vCores CPU",
@@ -20246,7 +20246,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹4,000/month",
-            link: "https://yghosting.xyz/vps.html",
+            link: "https://yghosting.xyz/pricing-vps.html",
             popular: !0
         }, {
             name: "Standard Prime - Contact Support",
@@ -20257,7 +20257,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹7,000/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }, {
             name: "Standard Extreme - Contact Support",
             cpu: "32 vCores CPU",
@@ -20267,7 +20267,7 @@ const SS = () => {
             protection: "OVH Shield (On-Demand)",
             deployment: "Auto/Instant Deployment",
             price: "₹9,400/month",
-            link: "https://yghosting.xyz/vps.html"
+            link: "https://yghosting.xyz/pricing-vps.html"
         }],
         "KVM Budget VPS": [{
             name: "Budget Starter",
