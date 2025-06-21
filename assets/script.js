@@ -19694,7 +19694,7 @@ const SS = () => {
                             })
                         }), a.jsx("p", {
                             className: "text-foreground/70",
-                            children: "Select the server location closest to your players"
+                            children: "These Locations and More Are Available! [You can choose location while checking out!]"
                         })]
                     }), a.jsx("div", {
                         className: "grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto",
